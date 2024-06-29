@@ -1,5 +1,5 @@
 function save_IEEE(q,...
-        extremeevents,...
+        network_parameters,...
         BAT_ROU_Sequence,...
         BAT_Nodal_Activation,...
         BAT_Dynamics,...
@@ -15,7 +15,7 @@ function save_IEEE(q,...
 
 n =   num2str((q-1)*100);
 
-    DATA.(['D',n])  = extremeevents;
+    DATA.(['D',n])  = network_parameters;
     DATA.(['BatSequence',n]) = BAT_ROU_Sequence;
     DATA.(['BatNodeAct',n]) = BAT_Nodal_Activation;
     DATA.(['AGC_Initial_Time',n]) = Time_to_AGC;
@@ -27,7 +27,7 @@ n =   num2str((q-1)*100);
     DATA.(['attack_sequence',n]) = attack_sequence;
     DATA.(['Time_of_Day',n]) = time_of_day;
     DATA.(['commanded_attack_sequence',n]) = commanded_attacks;
-    save(['Cyber_Attack',n,'MW_Bat.mat'],'DATA','-v7.3')
+    save(['Cyber_Attack',n,'MW_BatLogN4.mat'],'DATA','-v7.3')
 
 end
 
