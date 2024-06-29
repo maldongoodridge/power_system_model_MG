@@ -146,11 +146,11 @@ for i = 1:number
     
     prop_cumulative_attack = Cumulative_Attack;
     
-%     accept = Region*prod(lognpdf(abs(prop_cumulative_attack(Local_Load)),1,6))/...
-%     (prod(lognpdf(abs(current_cumulative_attack(Local_Load)),1,6)));
+      accept = Region*prod(lognpdf(abs(prop_cumulative_attack(Local_Load)),1,4))/...
+      (prod(lognpdf(abs(current_cumulative_attack(Local_Load)),1,4)));
 %     
-     accept = Region*lognpdf(sum(prop_cumulative_attack(Local_Load)),1,4)/...
-             (lognpdf(sum(current_cumulative_attack(Local_Load)),1,4));	
+   %  accept = Region*lognpdf(sum(prop_cumulative_attack(Local_Load)),1,4)/...
+  %           (lognpdf(sum(current_cumulative_attack(Local_Load)),1,4));	
 
     
     if accept > rand()
